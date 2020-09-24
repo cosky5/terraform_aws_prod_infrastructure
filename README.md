@@ -5,9 +5,11 @@
 $ terraform init
 ```
 The command terraform init will install 
+```
 * terraform modules
 * eventually a backend
 * and provider(s) plugins
+```
 
 To execute the plan
 ```
