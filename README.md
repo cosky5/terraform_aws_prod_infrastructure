@@ -1,3 +1,16 @@
+**Steps:**
+1. Create vpc
+2. Create Internet Gateway
+3. Create custom Roue Table
+4. Create a Subnet
+5. Associate subnet with Route Table
+6. Create a Security Group to allow port 22, 80, 443
+7. Create a network interface with an IP in the subnet that was created in step 4
+8. Assign an elastic IP to the network interface created in step 7
+9. Create an Ubuntu server and install and enable apache2
+
+
+
 # aws_vpc.prod-vpc
 
 ## Terraform Command
