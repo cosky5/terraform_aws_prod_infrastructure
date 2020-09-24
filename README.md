@@ -1,20 +1,30 @@
 # aws_vpc.prod-vpc
 
 ## Terraform Command
-```terraform init```
+```
+$ terraform init
+```
+The command terraform init will install 
+* terraform modules
+* eventually a backend
+* and provider(s) plugins
+
+To execute the plan
+```
+$ terraform apply
+```
 
 To auto run any update made on terraform
 ```
-terraform apply --auto-approve
+$ terraform apply --auto-approve
 ```
 
-```terraform apply```
-Apply any changes made to your resources
-
-```terraform state show aws_eip.two```
-# aws_eip.two:
+Apply any changes made to your resources **aws_eip.two**
 ```
-resource "aws_eip" "two" {
+$ terraform state show aws_eip.two
+```
+```
+$ resource "aws_eip" "two" {
     associate_with_private_ip = "10.0.1.50"
     association_id            = "eipassoc-0844e1c131fff3220"
     domain                    = "vpc"
@@ -28,10 +38,12 @@ resource "aws_eip" "two" {
     vpc                       = true
 }
 ```
+The list of resources in the 
+#### Debug Output
 
-```terraform state list```
-output
 ```
+$ terraform state list
+
 aws_eip.two
 aws_instance.web-server-instance
 aws_internet_gateway.gw
